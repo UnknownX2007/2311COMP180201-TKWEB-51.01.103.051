@@ -1,0 +1,45 @@
+body {
+    color: green;
+    border: black;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: '45px';
+    background: #2A7B9B;
+    background: linear-gradient(158deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    margin: 700px 20px, 100px;
+  }
+.round {border: solid;
+  border-radius: 50%;
+  border-color: green;
+}
+.square {border: 2px dashed;
+  border-color: green;
+ }
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
