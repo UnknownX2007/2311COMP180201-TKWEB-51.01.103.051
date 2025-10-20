@@ -1,0 +1,75 @@
+.hh-header {
+    position: relative;
+    height: 170px;
+}
+
+.hh-logo {
+    position: absolute;
+    right: 0px;
+    width: 400px;
+    top: 0;
+}
+
+.hh-company {
+    font-family: Impact;
+    font-size: 35px;
+    text-shadow: 0 0 2px black;
+    position: absolute;
+    top: 45px;
+    padding-bottom: 2px;
+    border-bottom: 1px dotted gray;
+}
+
+.hh-slogan {
+    position: absolute;
+    top: 85px;
+    font-style: italic;
+}
+
+.hh-sheet {
+    box-shadow: 0 0 5px lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+    top: -10px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.hh-body {
+    padding: 5px;
+}
+
+.hh-cart ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    font-size: smaller;
+}
+
+.hh-cart img {
+    height: 30%; 
+    width: 30%;
+    max-width: 80px; 
+    height: auto;
+    width: 100%;
+}
+
+.hh-card {
+    margin: 7px 0;
+}
+
+.hh-product {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.hh-product .card-body { 
+    padding: 5px 2px;
+    display: inline-block;
+}
+
+.hh-product .card-body img {
+    height: 150px;
+    max-width: 95%;
+}
