@@ -1,0 +1,90 @@
+#shark {
+    left: 100px;
+    top: 400px;
+    position: absolute;
+    animation-name: Shark;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes Shark {
+    0%   {left: 100px; top: 400px;}
+    20%  {left: 300px; top: 400px;}
+    40%  {left: 500px; top: 300px;}
+    50%  {left: 600px; top: 50px;}
+    60%  {left: 500px; top: 100px;}
+    80%  {left: 500px; top: 200px;}
+    100% {left: 100px; top: 400px; transform: scaleX(-1);}
+}
+
+#diver1 {
+    position: absolute;
+    left: 200px;
+    top: 50px;
+    
+    animation-name: Diver1;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#diver2 {
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    animation-name: Diver2;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#diver3 {
+    position: absolute;
+    left: 300px;
+    top: 50px;
+    
+    animation-name: Diver3;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes Diver1 {
+    from { top: 50px; left: 200px} 
+    to   { top: 450px; left: 800px;}
+    0%   { left: 50px; transform: scaleX(1); } 
+    49%  { left: 900px; transform: scaleX(1); } 
+    50%  { left: 900px; transform: scaleX(-1); } 
+    99%  { left: 50px; transform: scaleX(-1); } 
+}
+
+@keyframes Diver2 {
+    from { top: 30px; } 
+    to   { top: 450px; } 
+}
+
+@keyframes Diver3 {
+    from { top: 50px; left: 0px } 
+    to   { top: 450px; left: 300px} 
+}
+
+#turtle {
+    position: absolute;
+    left: 50px; 
+    top: 500px;
+    animation-name: TurtleMove;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes TurtleMove {
+    0%   { left: 50px; transform: scaleX(1); } 
+    49%  { left: 900px; transform: scaleX(1); } 
+    50%  { left: 900px; transform: scaleX(-1); } 
+    99%  { left: 50px; transform: scaleX(-1); } 
+    100% { left: 50px; transform: scaleX(1); }  
+}
