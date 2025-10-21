@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Quản Lý Sản Phẩm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <h1>Quản Lý Sản Phẩm</h1>
-    <input type="text" id="new-product-name" placeholder="Tên sản phẩm...">
-    <button onclick="addProduct()">Thêm</button>
-    <hr>
-    <h2>Danh sách sản phẩm</h2>
-    <div id="product-list"></div>
-    <script type="text/javascript" src="index.js"></script>
+    <div class="container">
+        <h1>Quản lý sản phẩm</h1>
+
+        <form id="product-form">
+            <input type="text" id="product-name" placeholder="Nhập tên sản phẩm" required>
+            <button type="submit" id="add-btn">Thêm sản phẩm</button>
+        </form>
+        
+        <hr>
+
+        <h2>Danh sách sản phẩm</h2>
+        <ul id="product-list">
+            </ul>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
