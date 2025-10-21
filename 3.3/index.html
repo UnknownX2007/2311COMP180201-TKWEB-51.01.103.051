@@ -1,43 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-	<h1>Sản phẩm</h1>
-	<div id="products"></div>
-	<br>
-	<button onclick="add()">Add</button>
-	<button onclick="edit()">Edit</button>
-	<button onclick="del()">Delete</button>
-	<script type="text/javascript">
-		var product_list= ['Banh Kem','Sua','Duong'];
-		function show() {
-			var s="";
-		for (var i=0; i< product_list.length; i++) {
-			s=s+(i+1)+". "+product_list[i]+'<br>';
-		}
-		return s;
-	}
-	document.getElementById('products').innerHTML = show();
-	function add() {
-		var sp = prompt("Nhap san pham");
-		product_list.push(sp);
-		document.getElementById('products').innerHTML = show();
-	}
-	function edit() {
-		var sp = prompt("Chon san pham muon sua");
-		var name = prompt("Sua lai ten gi");
-		product_list[sp-1]=name;
-		document.getElementById('products').innerHTML = show();
-	}
-	function del() {
-		var sp = prompt("Chon san pham muon xoa");
-		product_list.splice(sp-1,1);
-		document.getElementById('products').innerHTML = show();
-	}
-	</script>
+
+    <div class="container">
+        <h1>Quản lý sản phẩm</h1>
+
+        <form id="product-form">
+            <input type="text" id="product-name" placeholder="Nhập tên sản phẩm" required>
+            <button type="submit" id="add-btn">Thêm sản phẩm</button>
+        </form>
+        
+        <hr>
+
+        <h2>Danh sách sản phẩm</h2>
+        <ul id="product-list">
+            </ul>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
