@@ -6,28 +6,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let products = [];
 
     function renderProducts() {
-        productList.innerHTML = ''; list
+        productList.innerHTML = ''; 
         products.forEach(product => {
             const li = document.createElement('li');
             li.setAttribute('data-id', product.id);
 
-                   const nameSpan = document.createElement('span');
+            const nameSpan = document.createElement('span');
             nameSpan.className = 'product-name-display';
             nameSpan.textContent = product.name;
 
-                       const editInput = document.createElement('input');
+            const editInput = document.createElement('input');
             editInput.type = 'text';
             editInput.className = 'product-edit-input';
             editInput.value = product.name;
+
             const actionsDiv = document.createElement('div');
             actionsDiv.className = 'actions';
 
-                       const editButton = document.createElement('button');
+            const editButton = document.createElement('button');
             editButton.className = 'edit-btn';
             editButton.textContent = 'Sửa';
             editButton.onclick = () => toggleEdit(product.id, li, editInput);
 
-                    const deleteButton = document.createElement('button');
+            const deleteButton = document.createElement('button');
             deleteButton.className = 'delete-btn';
             deleteButton.textContent = 'Xóa';
             deleteButton.onclick = () => deleteProduct(product.id);
@@ -38,23 +39,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-     productForm.addEventListener('submit', (e) => {
+    productForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const newName = productNameInput.value.trim();
 
         if (newName) {
             addProduct(newName);
-            productNameInput.value = '';   }
+            productNameInput.value = '';
+        }
     });
 
     function addProduct(name) {
         const newProduct = {
-            id: Date.now(),  unique ID
+            id: Date.now(), 
             name: name
         };
         products.push(newProduct);
         saveAndRender();
     }
+
     function toggleEdit(id, listItem, inputField) {
         if (listItem.classList.contains('editing')) {
             const newName = inputField.value.trim();
@@ -76,15 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-     function deleteProduct(id) {
+    function deleteProduct(id) {
         products = products.filter(product => product.id !== id);
         saveAndRender();
     }
 
-      function saveAndRender() {
-        
+    function saveAndRender() {
+        // Re-render the list
         renderProducts();
     }
 
-    enderProducts();
+    renderProducts();
 });
