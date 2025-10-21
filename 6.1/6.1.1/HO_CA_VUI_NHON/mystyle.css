@@ -1,3 +1,13 @@
+body {
+    background-image: url("https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyaDV4dmJvM2VvZWF1eGsxcGpuZm9pZnhmcXE0ZnN5emp4ejBsNjY1aSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ZTAojHK9IHsSQ/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vh;
+    margin: 0;
+    padding: 0;
+}
 #shark {
     left: 100px;
     top: 400px;
